@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bodyparts",
+  "info": {
+    "singularName": "bodypart",
+    "pluralName": "bodyparts",
+    "displayName": "Bodypart",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bodypart": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "exercises": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::exercise.exercise",
+      "inversedBy": "bodyparts"
+    }
+  }
+}
